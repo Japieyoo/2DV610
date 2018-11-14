@@ -47,5 +47,13 @@ class CardTests {
 
 		assertTrue(actual);
 	}
+	
+	@Test
+	public void CardValueEnum_CheckThatItContainsThirteenValues_ReturnThirteen() {
+		int actual = Card.CardValue.values().length;
+		int expected = 13;
+
+		assertEquals(expected, actual);
+	}
 
 }
