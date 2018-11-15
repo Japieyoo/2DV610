@@ -16,7 +16,7 @@ public class Card {
 		}
 
 		public int getNumVal() {
-			return 0;
+			return 1;
 		}
 	}
 }
