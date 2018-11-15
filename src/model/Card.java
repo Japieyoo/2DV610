@@ -7,7 +7,7 @@ public class Card {
 	}
 
 	public enum CardValue {
-		ACE(1), TWO(1), THREE(1), FOUR(1), FIVE(1), SIX(1), SEVEN(1), EIGHT(1), NINE(1), TEN(1), ELEVEN(1), TWELVE(1), THIRTEEN(1);
+		ACE(1), TWO(2), THREE(3), FOUR(4), FIVE(5), SIX(6), SEVEN(7), EIGHT(8), NINE(9), TEN(10), ELEVEN(11), TWELVE(12), THIRTEEN(13);
 
 		private int numVal;
 
