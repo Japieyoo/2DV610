@@ -62,14 +62,6 @@ class CardTests {
 	}
 
 	@Test
-	public void CardValuegetNumVal_CheckACE_ReturnOne() {
-		int actual = Card.CardValue.ACE.getNumVal();
-		int expected = 1;
-
-		assertEquals(expected, actual);
-	}
-
-	@Test
 	public void CardValuegetNumVal_CheckAllCardValuesAreCorrect_ReturnTrue() {
 		boolean actual = false;
 		int valueCheck = 1;
