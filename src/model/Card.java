@@ -31,4 +31,7 @@ public class Card {
 			return this.numVal;
 		}
 	}
+	public Color getColor() {
+		return color;
+	}
 }
