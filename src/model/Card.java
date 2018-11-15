@@ -34,4 +34,7 @@ public class Card {
 	public Color getColor() {
 		return color;
 	}
+	public CardValue getCardValue() {
+		return cardValue;
+	}
 }
