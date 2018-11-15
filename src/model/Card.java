@@ -1,7 +1,17 @@
 package model;
 
 public class Card {
+	
+	public Color color;
+	public CardValue cardValue;
+	
+	public Card(Color color, CardValue cardValue) {
 
+	this.color = color;
+	this.cardValue = cardValue;
+	
+	}
+	
 	public enum Color {
 		Spades, Clubs, Hearts, Diamonds
 	}
