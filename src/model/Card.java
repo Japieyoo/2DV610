@@ -6,7 +6,9 @@ public class Card {
 	public CardValue cardValue;
 	
 	public Card(Color color, CardValue cardValue) {
-
+		if(color == null || cardValue == null) {
+			throw new IllegalArgumentException();
+		}
 	this.color = color;
 	this.cardValue = cardValue;
 	
