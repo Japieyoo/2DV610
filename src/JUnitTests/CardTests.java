@@ -81,7 +81,7 @@ class CardTests {
 	}
 
 	@Test
-	public void constructor_should_throw_when_no_parameter() {
+	public void ConstructorShouldThrowWhenNullParameter() {
 		boolean thrown = false;
 		try {
 			new Card(null, null);
@@ -90,5 +90,24 @@ class CardTests {
 		}
 		assertTrue(thrown);
 	}
+	@Test
+	public void ConstructorShouldNotThrowWithCorrectParameter() {
+		boolean thrown = true;
+		try {
+			new Card(Color.Clubs, CardValue.ACE);
+		} catch (Exception e) {
+			thrown = false;
+		}
+		assertTrue(thrown);
+	}
+	@Test
+	public void GetCardColorShouldReturnCardColor() {
+		Card sut = new Card(Card.Color.Hearts, Card.CardValue.ACE);
+		Card.Color expected = Card.Color.Hearts;
+		Card.Color actual = sut.getColor();
+		assertEquals(expected, actual);
+		
+	}
+	
 
 }
