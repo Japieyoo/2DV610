@@ -2,7 +2,7 @@ package model;
 
 public class Card {
 	
-	public Color color;
+	private Color color;
 	public CardValue cardValue;
 	
 	public Card(Color color, CardValue cardValue) {
