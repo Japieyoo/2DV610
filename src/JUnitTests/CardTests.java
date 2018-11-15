@@ -44,7 +44,7 @@ class CardTests {
 	}
 
 	@Test
-	public void CardValueEnum_CheckThatItContainsTheACE_ReturnTrue() {
+	public void CardValueEnum_CheckThatItContainsThirteenCardValues_ReturnTrue() {
 		int actual = 0;
 		int expected = 13;
 		CardValue[] cardValueArray = Card.CardValue.values();
@@ -60,4 +60,15 @@ class CardTests {
 
 		assertEquals(expected, actual);
 	}
+
+	@Test
+	public void CardValuegetNumVal_CheckACE_ReturnOne() {
+		int actual = Card.CardValue.ACE.getNumVal();
+		int expected = 1;
+
+		assertEquals(expected, actual);
+	}
+	
+	
+	
 }
