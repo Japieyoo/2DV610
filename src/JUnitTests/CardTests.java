@@ -68,7 +68,22 @@ class CardTests {
 
 		assertEquals(expected, actual);
 	}
-	
-	
-	
+
+	@Test
+	public void CardValuegetNumVal_CheckAllCardValuesAreCorrect_ReturnTrue() {
+		boolean actual = false;
+		int valueCheck = 1;
+		CardValue[] cardValueArray = Card.CardValue.values();
+		for (int i = 0; i < cardValueArray.length; i++) {
+			if (cardValueArray[i].getNumVal() == valueCheck++) {
+				actual = true;
+			} else {
+				actual = false;
+				break;
+			}
+		}
+
+		assertTrue(actual);
+	}
+
 }
