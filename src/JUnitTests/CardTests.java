@@ -108,6 +108,14 @@ class CardTests {
 		assertEquals(expected, actual);
 		
 	}
+	@Test
+	public void GetCardValueShouldReturnCardValue() {
+		Card sut = new Card(Card.Color.Hearts, Card.CardValue.ACE);
+		Card.CardValue expected = Card.CardValue.ACE;
+		Card.CardValue actual = sut.getCardValue();
+		assertEquals(expected, actual);
+		
+	}
 	
 
 }
