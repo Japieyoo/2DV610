@@ -3,7 +3,7 @@ package model;
 public class Card {
 	
 	private Color color;
-	public CardValue cardValue;
+	private CardValue cardValue;
 	
 	public Card(Color color, CardValue cardValue) {
 		if(color == null || cardValue == null) {
