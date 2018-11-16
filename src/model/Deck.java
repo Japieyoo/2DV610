@@ -17,7 +17,12 @@ public class Deck {
 
 	      }
 	    }
-}
+
+	}
+	public int getSize() {
+		return deck.size();
+	}
+	
 	public Card drawCard(){
 		if (deck.size() < 0) {
 			throw new NullPointerException();
