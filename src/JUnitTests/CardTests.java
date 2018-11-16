@@ -64,7 +64,7 @@ class CardTests {
 	}
 
 	@Test
-	public void CardValuegetNumVal_CheckAllCardValuesAreCorrect_ReturnTrue() {
+	public void CardValueGetNumVal_CheckAllCardValuesAreCorrect_ReturnTrue() {
 		boolean actual = false;
 		int valueCheck = 1;
 		CardValue[] sut = Card.CardValue.values();
@@ -81,7 +81,7 @@ class CardTests {
 	}
 
 	@Test
-	public void ConstructorShouldThrowWhenNullParameter() {
+	public void Constructor_ShouldThrowWhenNullParameter() {
 		boolean thrown = false;
 		try {
 			new Card(null, null);
@@ -91,7 +91,7 @@ class CardTests {
 		assertTrue(thrown);
 	}
 	@Test
-	public void ConstructorShouldNotThrowWithCorrectParameter() {
+	public void Constructor_ShouldNotThrowWithCorrectParameter() {
 		boolean thrown = true;
 		try {
 			new Card(Color.Clubs, CardValue.ACE);
@@ -101,7 +101,7 @@ class CardTests {
 		assertTrue(thrown);
 	}
 	@Test
-	public void GetCardColorShouldReturnCardColor() {
+	public void GetCardColor_ReturnHearts() {
 		Card sut = new Card(Card.Color.Hearts, Card.CardValue.ACE);
 		Card.Color expected = Card.Color.Hearts;
 		Card.Color actual = sut.getColor();
@@ -109,7 +109,7 @@ class CardTests {
 		
 	}
 	@Test
-	public void GetCardValueShouldReturnCardValue() {
+	public void GetCardValue_ReturnACE() {
 		Card sut = new Card(Card.Color.Hearts, Card.CardValue.ACE);
 		Card.CardValue expected = Card.CardValue.ACE;
 		Card.CardValue actual = sut.getCardValue();
@@ -117,7 +117,7 @@ class CardTests {
 		
 	}
 	@Test
-	public void GetCardValueShouldReturnCardAdditionalValue() {
+	public void GetCardValue_Return1() {
 		Card sut = new Card(Card.Color.Hearts, Card.CardValue.ACE);
 		int expected = 1;
 		int actual = sut.getCardValue().getNumVal();

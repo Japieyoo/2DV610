@@ -8,8 +8,6 @@ import org.junit.jupiter.api.Test;
 
 import model.Card;
 import model.Deck;
-import model.Card.CardValue;
-import model.Card.Color;
 
 class DeckTests {
 	
@@ -59,18 +57,14 @@ class DeckTests {
 	public void DrawCard_OnEmptyDeck_ReturnException() {
 		boolean thrown = false;
 		try {
-		int size = sut.deck.size();
-		for(int i = 0; i < size+1; i++) {
-			sut.drawCard();
+			int size = sut.deck.size();
+			for (int i = 0; i < size + 1; i++) {
+				sut.drawCard();
+			}
+		} catch (Exception e) {
+			thrown = true;
 		}
-		
-
-		}catch(Exception e){
-			thrown=true;
-		}
-		
 		assertTrue(thrown);
 	}
-		
 	
 }
