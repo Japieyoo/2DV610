@@ -26,7 +26,7 @@ class DeckTests {
 		assertEquals(expected, actual);
 	}
 	@Test
-	public void Deck_CheckDifferentCards_Return52() {
+	public void Deck_CheckThatAllDifferentCardsExist_Return52() {
 		
 		int actual = 0;
 		int expected = 52;
@@ -48,6 +48,14 @@ class DeckTests {
 		}
 		assertEquals(expected, actual);
 	
+	}
+	
+	@Test
+	public void DrawCard_CheckDeckSizeDecrease_Return51() {
+		sut.deck.drawCard();
+		int expected = 51;
+		int actual = sut.deck.size();
+		assertEquals(expected, actual);
 	}
 	
 }
