@@ -31,11 +31,8 @@ class DeckTests {
 		int actual = 0;
 		int expected = 52;
 		int cardIndex = 0;
-		Card.Color[] colors = {Card.Color.Spades, Card.Color.Clubs, Card.Color.Hearts, Card.Color.Diamonds};
-		Card.CardValue[] values = {Card.CardValue.ACE, Card.CardValue.TWO, Card.CardValue.THREE, Card.CardValue.FOUR,
-		Card.CardValue.FIVE, Card.CardValue.SIX, Card.CardValue.SEVEN, Card.CardValue.EIGHT,
-		Card.CardValue.NINE, Card.CardValue.TEN, Card.CardValue.ELEVEN, Card.CardValue.TWELVE,
-		Card.CardValue.THIRTEEN};
+		Card.Color[] colors = Card.Color.values();
+		Card.CardValue[] values = Card.CardValue.values();
 		for(int i = 0; i < colors.length; i++) {
 				for(int j = 0; j < values.length; j++) {
 					if (sut.deck.get(cardIndex).getCardValue() == values[j] && sut.deck.get(cardIndex).getColor() == colors[i]) {
