@@ -3,7 +3,7 @@ package model;
 import java.util.ArrayList;
 
 public class Deck {
-	public ArrayList <Card> deck;
+	private ArrayList <Card> deck;
 
 	public Deck() {
 	    deck = new ArrayList<Card>();
@@ -22,7 +22,10 @@ public class Deck {
 	public int getSize() {
 		return deck.size();
 	}
-	
+	  public Iterable<Card> getHand() {
+		    return deck;
+		  }
+	  
 	public Card drawCard(){
 		if (deck.size() < 0) {
 			throw new NullPointerException();

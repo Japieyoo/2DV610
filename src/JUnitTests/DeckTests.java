@@ -3,6 +3,8 @@ package JUnitTests;
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.ArrayList;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -12,21 +14,24 @@ import model.Deck;
 class DeckTests {
 	
 	Deck sut;
+	ArrayList<Card> iteratedList;
 	
 	@BeforeEach
 	public void setup() {
+		
 		sut = new Deck();
+		
+		iteratedList = new ArrayList<Card>();
+		for ( Card c : sut.getHand()) {
+			iteratedList.add(c);
+		}
 	}
 	
-	@Test
-	public void Size_CheckDeckSize_Return52() {
-		
-		int expected = 52;
-		int actual = sut.deck.size();
-		assertEquals(expected, actual);
-	}
+	
+
 	@Test
 	public void Deck_CheckThatAllDifferentCardsExist_Return52() {
+	
 		
 		int actual = 0;
 		int expected = 52;
@@ -35,7 +40,7 @@ class DeckTests {
 		Card.CardValue[] values = Card.CardValue.values();
 		for(int i = 0; i < colors.length; i++) {
 				for(int j = 0; j < values.length; j++) {
-					if (sut.deck.get(cardIndex).getCardValue() == values[j] && sut.deck.get(cardIndex).getColor() == colors[i]) {
+					if (iteratedList.get(cardIndex).getCardValue() == values[j] && iteratedList.get(cardIndex).getColor() == colors[i]) {
 						actual++;
 						cardIndex++;
 					}
@@ -45,18 +50,13 @@ class DeckTests {
 	
 	}
 	
-	@Test
-	public void DeckSize_Return52() {
-		int expected = 52;
-		int actual = sut.getSize();
-		assertEquals(expected, actual);
-	}
+
 	
 	@Test
 	public void DrawCard_CheckDeckSizeDecrease_Return51() {
 		sut.drawCard();
 		int expected = 51;
-		int actual = sut.deck.size();
+		int actual = sut.getSize();
 		assertEquals(expected, actual);
 	}
 	
@@ -66,7 +66,7 @@ class DeckTests {
 	public void DrawCard_OnEmptyDeck_ReturnException() {
 		boolean thrown = false;
 		try {
-			int size = sut.deck.size();
+			int size = iteratedList.size();
 			for (int i = 0; i < size + 1; i++) {
 				sut.drawCard();
 			}
