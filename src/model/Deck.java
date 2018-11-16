@@ -18,4 +18,8 @@ public class Deck {
 	      }
 	    }
 }
+	public Card drawCard() {
+		return deck.remove(0);
+		
+	}
 }

@@ -52,7 +52,7 @@ class DeckTests {
 	
 	@Test
 	public void DrawCard_CheckDeckSizeDecrease_Return51() {
-		sut.deck.drawCard();
+		sut.drawCard();
 		int expected = 51;
 		int actual = sut.deck.size();
 		assertEquals(expected, actual);
