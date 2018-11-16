@@ -10,10 +10,10 @@ class DeckTests {
 
 	@Test
 	public void Size_CheckDeckSize_Return52() {
-		Deck d = new Deck();
+		Deck sut = new Deck();
 		
 		int expected = 52;
-		int actual = d.deck.size();
+		int actual = sut.deck.size();
 		assertEquals(expected, actual);
 	}
 }
