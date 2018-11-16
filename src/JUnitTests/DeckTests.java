@@ -46,12 +46,21 @@ class DeckTests {
 	}
 	
 	@Test
+	public void DeckSize_Return52() {
+		int expected = 52;
+		int actual = sut.getSize();
+		assertEquals(expected, actual);
+	}
+	
+	@Test
 	public void DrawCard_CheckDeckSizeDecrease_Return51() {
 		sut.drawCard();
 		int expected = 51;
 		int actual = sut.deck.size();
 		assertEquals(expected, actual);
 	}
+	
+	
 	
 	@Test
 	public void DrawCard_OnEmptyDeck_ReturnException() {
