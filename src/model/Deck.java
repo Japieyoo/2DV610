@@ -3,13 +3,19 @@ package model;
 import java.util.ArrayList;
 
 public class Deck {
-	public ArrayList <Card > deck;
-	
+	public ArrayList <Card> deck;
+
 	public Deck() {
-		deck = new ArrayList<Card>();
-		Card c = new Card(Card.Color.Clubs, Card.CardValue.ACE);
-		for (int i = 0; i < 52; i++) {
-			deck.add(c);
-		}
-	}
+	    deck = new ArrayList<Card>();
+
+	    for (int i = 0; i < Card.Color.values().length; i++) {
+
+	      for (int j = 0; j < Card.CardValue.values().length; j++) {
+	        Card c = new Card(Card.Color.values()[i], Card.CardValue.values()[j]);
+	       	      
+	        deck.add(c);
+
+	      }
+	    }
+}
 }
