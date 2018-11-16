@@ -3,21 +3,23 @@ package JUnitTests;
 import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import model.Card;
 import model.Deck;
-import model.Card.CardValue;
-import model.Card.Color;
 
 class DeckTests {
-
+	
+	Deck sut;
+	
+	@BeforeEach
+	public void setup() {
+		sut = new Deck();
+	}
+	
 	@Test
 	public void Size_CheckDeckSize_Return52() {
-		Deck sut = new Deck();
 		
 		int expected = 52;
 		int actual = sut.deck.size();
@@ -25,7 +27,7 @@ class DeckTests {
 	}
 	@Test
 	public void Deck_CheckDifferentCards_Return52() {
-		Deck sut = new Deck();
+		
 		int actual = 0;
 		int expected = 52;
 		int cardIndex = 0;
