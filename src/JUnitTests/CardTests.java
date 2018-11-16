@@ -116,6 +116,13 @@ class CardTests {
 		assertEquals(expected, actual);
 		
 	}
-	
+	@Test
+	public void GetCardValueShouldReturnCardAdditionalValue() {
+		Card sut = new Card(Card.Color.Hearts, Card.CardValue.ACE);
+		int expected = 1;
+		int actual = sut.getCardValue().getNumVal();
+		assertEquals(expected, actual);
+		
+	}
 
 }
