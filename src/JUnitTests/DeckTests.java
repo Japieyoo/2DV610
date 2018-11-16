@@ -59,9 +59,12 @@ class DeckTests {
 	public void DrawCard_OnEmptyDeck_ReturnException() {
 		boolean thrown = false;
 		try {
-		for(int i = 0; i < sut.deck.size() + 1; i++) {
+		int size = sut.deck.size();
+		for(int i = 0; i < size+1; i++) {
 			sut.drawCard();
 		}
+		
+
 		}catch(Exception e){
 			thrown=true;
 		}
