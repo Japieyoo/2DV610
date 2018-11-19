@@ -12,12 +12,19 @@ class PlayerTests {
 	@BeforeEach
 	public void setUp() {
 		p = new Player();
+		p.setName("Test");
 	}
 
 	@Test
 	public void setName_ShouldSetANameForThePlayer() {
+		String actual = p.name;
+		String expected = "Test";
 
-		p.setName("Test");
+		assertEquals(expected, actual);
+	}
+	@Test
+	public void getName_ShouldReturnTheNameOfThePlayer() {
+		p.getName();
 		String actual = p.name;
 		String expected = "Test";
 
