@@ -10,6 +10,9 @@ public class Player {
 	}
 
 	public String getName() {
+		if (name == null) {
+			throw new NullPointerException();
+		}
 		return name;
 
 	}
