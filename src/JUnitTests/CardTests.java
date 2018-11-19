@@ -6,7 +6,6 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import model.Card;
 import model.Card.CardValue;
@@ -90,6 +89,28 @@ class CardTests {
 		}
 		assertTrue(thrown);
 	}
+	
+	@Test
+	public void Constructor2_ShouldThrowWhenNullParameter() {
+		boolean thrown = false;
+		try {
+			new Card(Card.Color.Hearts, null);
+		} catch (Exception e) {
+			thrown = true;
+		}
+		assertTrue(thrown);
+	}
+	@Test
+	public void Constructor3_ShouldThrowWhenNullParameter() {
+		boolean thrown = false;
+		try {
+			new Card(null, Card.CardValue.EIGHT);
+		} catch (Exception e) {
+			thrown = true;
+		}
+		assertTrue(thrown);
+	}
+	
 	@Test
 	public void Constructor_ShouldNotThrowWithCorrectParameter() {
 		boolean thrown = true;
