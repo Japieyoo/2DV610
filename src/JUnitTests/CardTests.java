@@ -18,6 +18,7 @@ class CardTests {
 		int expected = 4;
 
 		assertEquals(expected, actual);
+
 	}
 
 	@Test
