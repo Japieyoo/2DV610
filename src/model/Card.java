@@ -1,7 +1,19 @@
 package model;
 
 public class Card {
-
+	
+	private Color color;
+	private CardValue cardValue;
+	
+	public Card(Color color, CardValue cardValue) {
+		if(color == null || cardValue == null) {
+			throw new IllegalArgumentException();
+		}
+	this.color = color;
+	this.cardValue = cardValue;
+	
+	}
+	
 	public enum Color {
 		Spades, Clubs, Hearts, Diamonds
 	}
@@ -18,5 +30,11 @@ public class Card {
 		public int getNumVal() {
 			return this.numVal;
 		}
+	}
+	public Color getColor() {
+		return color;
+	}
+	public CardValue getCardValue() {
+		return cardValue;
 	}
 }
