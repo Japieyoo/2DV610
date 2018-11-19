@@ -24,11 +24,13 @@ public class Deck {
 		return deck.size();
 	}
 
+
 	public Iterable<Card> getHand() {
 		return deck;
 	}
 
-	public Card drawCard() {
+	  
+	public Card drawCard(){
 		if (deck.size() <= 0) {
 			throw new NullPointerException();
 		}

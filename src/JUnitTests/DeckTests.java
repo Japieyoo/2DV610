@@ -33,6 +33,7 @@ class DeckTests {
 		int actual = 0;
 		int expected = 52;
 		int cardIndex = 0;
+
 		Card.Color[] colors = Card.Color.values();
 		Card.CardValue[] values = Card.CardValue.values();
 		for (int i = 0; i < colors.length; i++) {
@@ -71,3 +72,4 @@ class DeckTests {
 	}
 
 }
+
