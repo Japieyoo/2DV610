@@ -27,7 +27,15 @@ class DeckTests {
 		}
 	}
 
-
+	@Test
+	public void Size_CheckDeckSize_Return52() {
+		Deck d = new Deck();
+		
+		int expected = 52;
+		int actual = d.getSize();
+		assertEquals(expected, actual);
+	}
+	
 	@Test
 	public void Deck_CheckThatAllDifferentCardsExist_Return52() {
 
