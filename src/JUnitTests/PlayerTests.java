@@ -16,16 +16,8 @@ class PlayerTests {
 	}
 
 	@Test
-	public void setName_ShouldSetANameForThePlayer() {
-		String actual = p.name;
-		String expected = "Test";
-
-		assertEquals(expected, actual);
-	}
-	@Test
 	public void getName_ShouldReturnTheNameOfThePlayer() {
-		p.getName();
-		String actual = p.name;
+		String actual = p.getName();
 		String expected = "Test";
 
 		assertEquals(expected, actual);

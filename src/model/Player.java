@@ -2,7 +2,7 @@ package model;
 
 public class Player {
 
-	public String name;
+	private String name;
 
 	public void setName(String string) {
 		name = string;
