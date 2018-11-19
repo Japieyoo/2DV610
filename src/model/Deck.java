@@ -27,7 +27,7 @@ public class Deck {
 		  }
 	  
 	public Card drawCard(){
-		if (deck.size() < 0) {
+		if (deck.size() <= 0) {
 			throw new NullPointerException();
 		}
 		return deck.remove(0);

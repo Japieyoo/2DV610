@@ -6,7 +6,6 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
 
 import model.Card;
 import model.Card.CardValue;
@@ -48,7 +47,7 @@ class CardTests {
 
 	@Test
 	public void CardValueEnum_CheckThatItContainsThirteenCardValues_ReturnTrue() {
-		CardValue [] sut = Card.CardValue.values();
+		CardValue[] sut = Card.CardValue.values();
 		int actual = 0;
 		int expected = 13;
 		CardValue[] correctArray = { Card.CardValue.ACE, Card.CardValue.TWO, Card.CardValue.THREE, Card.CardValue.FOUR,
@@ -91,6 +90,29 @@ class CardTests {
 		}
 		assertTrue(thrown);
 	}
+
+	@Test
+	public void Constructor_ShouldThrowWhenNullParameter_2() {
+		boolean thrown = false;
+		try {
+			new Card(Card.Color.Hearts, null);
+		} catch (Exception e) {
+			thrown = true;
+		}
+		assertTrue(thrown);
+	}
+
+	@Test
+	public void Constructor3_ShouldThrowWhenNullParameter_3() {
+		boolean thrown = false;
+		try {
+			new Card(null, Card.CardValue.EIGHT);
+		} catch (Exception e) {
+			thrown = true;
+		}
+		assertTrue(thrown);
+	}
+
 	@Test
 	public void Constructor_ShouldNotThrowWithCorrectParameter() {
 		boolean thrown = true;
@@ -101,29 +123,32 @@ class CardTests {
 		}
 		assertTrue(thrown);
 	}
+
 	@Test
 	public void GetCardColor_ReturnHearts() {
 		Card sut = new Card(Card.Color.Hearts, Card.CardValue.ACE);
 		Card.Color expected = Card.Color.Hearts;
 		Card.Color actual = sut.getColor();
 		assertEquals(expected, actual);
-		
+
 	}
+
 	@Test
 	public void GetCardValue_ReturnACE() {
 		Card sut = new Card(Card.Color.Hearts, Card.CardValue.ACE);
 		Card.CardValue expected = Card.CardValue.ACE;
 		Card.CardValue actual = sut.getCardValue();
 		assertEquals(expected, actual);
-		
+
 	}
+
 	@Test
 	public void GetCardValue_Return1() {
 		Card sut = new Card(Card.Color.Hearts, Card.CardValue.ACE);
 		int expected = 1;
 		int actual = sut.getCardValue().getNumVal();
 		assertEquals(expected, actual);
-		
+
 	}
 
 }
