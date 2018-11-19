@@ -22,7 +22,7 @@ class DeckTests {
 		sut = new Deck();
 
 		iteratedList = new ArrayList<Card>();
-		for (Card c : sut.getHand()) {
+		for (Card c : sut.getDeck()) {
 			iteratedList.add(c);
 		}
 	}

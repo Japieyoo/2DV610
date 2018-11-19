@@ -6,6 +6,9 @@ import org.junit.jupiter.api.Test;
 
 class GameTests {
 
-	
+	@Test
+	void test() {
+		fail("Not yet implemented");
+	}
 
 }

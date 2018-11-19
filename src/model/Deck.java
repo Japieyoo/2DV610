@@ -25,7 +25,7 @@ public class Deck {
 	}
 
 
-	public Iterable<Card> getHand() {
+	public Iterable<Card> getDeck() {
 		return deck;
 	}
 
