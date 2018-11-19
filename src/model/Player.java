@@ -6,7 +6,6 @@ public class Player {
 
 	public void setName(String string) {
 		name = string;
-
 	}
 
 	public String getName() {
@@ -14,7 +13,5 @@ public class Player {
 			throw new NullPointerException();
 		}
 		return name;
-
 	}
-
 }

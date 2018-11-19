@@ -4,8 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import model.Card;
 import model.Player;
 
 class PlayerTests {
@@ -18,7 +16,7 @@ class PlayerTests {
 	}
 
 	@Test
-	public void getName_ShouldThrowErrorWhenNameIsEmpty() {
+	public void getName_ShouldThrowErrorWhenNameIsNotSet() {
 		Player fail = new Player();
 		boolean thrown = false;
 
@@ -27,16 +25,14 @@ class PlayerTests {
 		} catch (Exception e) {
 			thrown = true;
 		}
-
 		assertTrue(thrown);
 	}
 
 	@Test
-	public void getName_ShouldReturnTheNameOfThePlayer() {
+	public void getName_ShouldReturnTest() {
 		String actual = p.getName();
 		String expected = "Test";
 
 		assertEquals(expected, actual);
 	}
-
 }
